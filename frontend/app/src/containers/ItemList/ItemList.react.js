@@ -28,7 +28,7 @@ class ItemList extends Component {
 
     return (
       <div>
-        Using Mock Data
+        Using Mock Data...
         <br />
         <div className="domain-table">
             <div className="row header">

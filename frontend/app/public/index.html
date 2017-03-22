@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Domains</title>
+
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- <meta name="theme-color" content="#2F3BA2"> -->
+
+    <link rel="stylesheet" href="webpack/styles.css" media="all" />
+
+    <style>
+      .domain-table {
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid #999;
+        display: table;
+        padding: 1em;
+      }
+      @media screen and (max-width: 580px) {
+        .domain-table {
+          display: block;
+        }
+      }
+
+      .domain-table .row {
+        display: table-row;
+        background: #fafafa;
+        padding: 0.5em;
+      }
+      .domain-table .row:nth-of-type(odd) {
+        background: #e9e9e9;
+      }
+      .domain-table .row.header {
+        font-weight: 900;
+        border-bottom: 2px solid grey;
+        color: #444;
+        background: #ffffff;
+      }
+      .domain-table .row.green {
+        background: #27ae60;
+      }
+      .domain-table .row.blue {
+        background: #2980b9;
+      }
+      @media screen and (max-width: 580px) {
+        .domain-table .row {
+          padding: 8px 0;
+          display: block;
+        }
+      }
+
+      .domain-table .cell {
+        padding: 0.5em;
+        display: table-cell;
+      }
+      @media screen and (max-width: 580px) {
+        .domain-table .cell {
+          padding: 2px 12px;
+          display: block;
+        }
+      }
+
+      .items .cell:first-of-type, .items .cell:nth-child(2) {
+        font-weight: bold;
+        color: #1a8259;
+      }
+
+      .items .cell:nth-child(3) {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .editForm {
+        padding: 0.5em;
+      }
+
+      .editForm label {
+        display: inline-block;
+        min-width: 10em;
+      }
+
+      .editForm input[type="text"] {
+        min-width: 20em;
+        padding: 0.5em;
+      }
+
+      .closeBtn {
+        color: #999;
+        float: right;
+        margin: 0.5em;
+        text-decoration: none;
+      }
+
+      .editBtn {
+        cursor: pointer;
+      }
+
+      button[type="submit"] {
+        background: #3d9072;
+        border: none;
+        color: white;
+        outline:; none;
+        padding: 0.5em;
+        margin: 0 0.5em 0.5em 0;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="reactApp"></div>
+
+    <script src="webpack/bundle.js"></script>
+  </body>
+
+</html>

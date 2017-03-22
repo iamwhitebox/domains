@@ -32,12 +32,8 @@ export class Item extends Component {
     this.setState({ editMode:true });
   }
 
-  _onClose(data) {
+  _onClose() {
     this.setState({
-      title: data.title,
-      email: data.email,
-      message: data.message,
-      price: data.price,
       editMode: false
     });
   }
@@ -54,7 +50,7 @@ export class Item extends Component {
         active: true
       }
     );
-    this._onClose(data);
+    this._onClose();
   }
 
   _delete() {

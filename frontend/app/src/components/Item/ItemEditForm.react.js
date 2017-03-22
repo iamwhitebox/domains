@@ -6,9 +6,14 @@ export default class ItemEditForm extends Component {
 		this.state = {
 			title: this.props.title,
 			email: this.props.email,
-			message: this.props.message,
 			price: this.props.price
 		};
+	}
+
+	_handleChange(event) {
+		const newState = {};
+		newState[event.target.name] = event.target.value;
+		this.setState(newState);
 	}
 
 	_handleSubmit(event) {
@@ -21,22 +26,6 @@ export default class ItemEditForm extends Component {
 		});
 	}
 
-	handleTitleChange(e) {
-	   this.setState({title: e.target.value});
-	}
-
-	handleEmailChange(e) {
-	   this.setState({email: e.target.value});
-	}
-
-	handleMessageChange(e) {
-	   this.setState({message: e.target.value});
-	}
-
-	handlePriceChange(e) {
-	   this.setState({price: e.target.value});
-	}
-
 	render() {
 		return (
 			<div>
@@ -45,13 +34,13 @@ export default class ItemEditForm extends Component {
 				<form className="editForm">
 					<div>
 						<p>
-							<label htmlFor="title"><strong>Title: </strong></label><input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleTitleChange.bind(this)} />
+							<label htmlFor="title"><strong>Title: </strong></label><input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this._handleChange.bind(this)} />
 						</p>
 						<p>
-							<label htmlFor="email"><strong>Registran Email: </strong></label><input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange.bind(this)}/>
+							<label htmlFor="email"><strong>Registran Email: </strong></label><input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)} />
 						</p>
 						<p>
-							<label htmlFor="price"><strong>Price: </strong></label><input type="text" name="price" placeholder="price" value={this.state.price} onChange={this.handlePriceChange.bind(this)}/>
+							<label htmlFor="price"><strong>Price: </strong></label><input type="text" name="price" placeholder="Price" value={this.state.price} onChange={this._handleChange.bind(this)} />
 						</p>
 						<button type="submit" onClick={this._handleSubmit.bind(this)}>Save Changes</button>
 					</div>

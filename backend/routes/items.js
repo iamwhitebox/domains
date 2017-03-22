@@ -26,7 +26,6 @@ router.route('/')
   const item = new Item();
   item.title = req.body.title;
   item.email = req.body.email;
-  item.author = req.body.author;
   item.message = req.body.message;
   item.price = req.body.price;
 

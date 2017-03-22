@@ -14,6 +14,17 @@ export default class ItemDisplay extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      title: this.props.title,
+      email: this.props.email,
+      message: this.props.message,
+      price: this.props.price
+    };
+  }
+
+  _onSubmit(newState) {
+    this.setState(newState);
+    this.props.onSubmit(newState);
   }
 
   render() {
@@ -24,9 +35,9 @@ export default class ItemDisplay extends Component {
       )
     });
     const items = [
-      this.props.title,
-      this.props.message,
-      this.props.price,
+      this.state.title,
+      this.state.message,
+      this.state.price,
       actions
     ];
 
@@ -48,7 +59,7 @@ export default class ItemDisplay extends Component {
                   email={this.props.email}
                   price={this.props.price}
                   onClose={this.props.onClose}
-                  onSubmit={this.props.onSubmit} />
+                  onSubmit={this._onSubmit.bind(this)} />
     }
 
     return (

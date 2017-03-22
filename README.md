@@ -16,6 +16,16 @@ __Technologies (Frontend)__
 * Redux - state management
 * React-router - routing
 * Redux Sagas - side effects & async
-* Webpack - __all__ processing and bundling
+* Webpack
 * PostCSS & CSS Modules - styling
-* Component Driven Design structure - structure
+
+__Technologies (Backend)__
+
+* Node.js
+* Express 4
+* MongoDB
+* Mongo-seed
+
+__Technologies (Devops)__
+
+* Docker

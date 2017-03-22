@@ -33,16 +33,15 @@ export default class ItemEditForm extends Component {
 				<a className="closeBtn" href="#" onClick={this.props.onClose}>×</a>
 
 				<form className="editForm">
+					<div className="editFormLabels">
+						<label htmlFor="title"><strong>Title: </strong></label>
+						<label htmlFor="email"><strong>Registran Email: </strong></label>
+						<label htmlFor="price"><strong>Price: </strong></label>
+					</div>
 					<div>
-						<p>
-							<label htmlFor="title"><strong>Title: </strong></label><input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this._handleChange.bind(this)} />
-						</p>
-						<p>
-							<label htmlFor="email"><strong>Registran Email: </strong></label><input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)} />
-						</p>
-						<p>
-							<label htmlFor="price"><strong>Price: </strong></label><input type="text" name="price" placeholder="Price" value={this.state.price} onChange={this._handleChange.bind(this)} />
-						</p>
+						<input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this._handleChange.bind(this)} />
+						<input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this._handleChange.bind(this)} />
+						<input type="text" name="price" placeholder="Price" value={this.state.price} onChange={this._handleChange.bind(this)} />
 						<button type="submit" onClick={this._handleSubmit.bind(this)}>Save Changes</button>
 					</div>
 				</form>

@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="webpack/styles.css" media="all" />
 
     <style>
+      body {
+        font-weight: 100;
+      }
       .domain-table {
         box-sizing: border-box;
         width: 100%;
@@ -77,16 +80,19 @@
       }
 
       .editForm {
+        display: flex;
         padding: 0.5em;
       }
 
       .editForm label {
         display: inline-block;
+        line-height: 2.9em;
         min-width: 10em;
       }
 
       .editForm input[type="text"] {
-        min-width: 20em;
+        margin-bottom: 10px;
+        min-width: 30em;
         padding: 0.5em;
       }
 
@@ -94,6 +100,7 @@
         color: #999;
         float: right;
         margin: 0.5em;
+        min-width: 1em;
         text-decoration: none;
       }
 
@@ -102,9 +109,11 @@
       }
 
       button[type="submit"] {
+        font-size: 0.9em;
         background: #3d9072;
         border: none;
         color: white;
+        display: block;
         outline:; none;
         padding: 0.5em;
         margin: 0 0.5em 0.5em 0;

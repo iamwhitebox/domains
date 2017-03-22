@@ -4,10 +4,10 @@ export default class ItemEditForm extends Component {
 	constructor(props) {
 		super(props);
 	    this.state = {
-	      title: this.props.title,
-	      email: this.props.email,
-	      message: this.props.message,
-	      price: this.props.price
+			title: this.props.title,
+			email: this.props.email,
+			message: this.props.message,
+			price: this.props.price
 	    };
 	}
 
@@ -29,7 +29,7 @@ export default class ItemEditForm extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="editFormWrapper">
 				<a className="btn closeBtn" href="#" onClick={this.props.onClose}>×</a>
 
 				<form className="editForm">

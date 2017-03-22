@@ -28,8 +28,6 @@ class ItemList extends Component {
 
     return (
       <div>
-        Using Fixtures... (no data persistence)
-        <br />
         <table className="table">
           <thead>
             <tr>

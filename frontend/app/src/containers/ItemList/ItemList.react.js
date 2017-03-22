@@ -28,7 +28,7 @@ class ItemList extends Component {
 
     return (
       <div>
-        Using Mock Data...
+        Using Fixtures... (no data persistence)
         <br />
         <table className="table">
           <thead>

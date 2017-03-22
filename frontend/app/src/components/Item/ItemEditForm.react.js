@@ -3,11 +3,12 @@ import React, { Component, PropTypes } from 'react';
 export default class ItemEditForm extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			title: this.props.title,
-			email: this.props.email,
-			price: this.props.price
-		};
+	    this.state = {
+	      title: this.props.title,
+	      email: this.props.email,
+	      message: this.props.message,
+	      price: this.props.price
+	    };
 	}
 
 	_handleChange(event) {

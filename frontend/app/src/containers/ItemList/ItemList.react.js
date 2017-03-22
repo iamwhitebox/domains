@@ -28,7 +28,6 @@ class ItemList extends Component {
 
     return (
       <div>
-        <ItemCreate />
         <br />
         <div className="domain-table">
             <div className="row header">

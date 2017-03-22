@@ -12,7 +12,7 @@ if (API_MODE === 'development') {
 
 
 if (API_MODE === 'mock') {
-  API.API_ITEMS = `${API_ROOT}/mockItems.json`;
+  API.API_ITEMS = `${API_ROOT}/seed.json`;
 }
 
 export { API };

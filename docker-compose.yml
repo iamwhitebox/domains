@@ -19,6 +19,13 @@ services:
     volumes_from:
       - mongodb-data
 
+  # MongoDB Seed
+  # Seed the mongodb collection with some initial data.
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongodb
+
   # Backend
   # Mounts the app as a volume and installs packages so we can develop locally
   backend:

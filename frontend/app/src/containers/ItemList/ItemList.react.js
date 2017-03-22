@@ -30,23 +30,27 @@ class ItemList extends Component {
       <div>
         Using Mock Data...
         <br />
-        <div className="domain-table">
-            <div className="row header">
-              <div className="cell">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>
                 Domain Name
-              </div>
-              <div className="cell">
+              </th>
+              <th>
                 Uniregistry
-              </div>
-              <div className="cell">
+              </th>
+              <th>
                 Price
-              </div>
-              <div className="cell">
+              </th>
+              <th>
                 Actions
-              </div>
-          </div>
-          {allItems}
-        </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {allItems}
+          </tbody>
+        </table>
       </div>
     );
   }

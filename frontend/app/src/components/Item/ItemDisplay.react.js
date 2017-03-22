@@ -51,7 +51,7 @@ export default class ItemDisplay extends Component {
             value = '';
           }
         }
-        return <div key={key} className='cell'>{value}</div>;
+        return <td key={key} className='cell'>{value}</td>;
       });
     } else {
       display = <ItemEditForm
@@ -63,9 +63,9 @@ export default class ItemDisplay extends Component {
     }
 
     return (
-      <div className="row items">
+      <tr className="items">
         {display}
-      </div>
+      </tr>
     );
   }
 }

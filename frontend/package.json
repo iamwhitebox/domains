@@ -1,6 +1,9 @@
 {
   "name": "domains",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.4.0"
+  },
   "description": "Domains",
   "main": "./app/server/index.js",
   "scripts": {

@@ -30,7 +30,7 @@ export default class ItemEditForm extends Component {
 	render() {
 		return (
 			<div>
-				<a className="closeBtn" href="#" onClick={this.props.onClose}>×</a>
+				<a className="btn closeBtn" href="#" onClick={this.props.onClose}>×</a>
 
 				<form className="editForm">
 					<div className="editFormLabels">

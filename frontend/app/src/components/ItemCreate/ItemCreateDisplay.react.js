@@ -8,17 +8,27 @@ export default class ItemCreateDisplay extends Component {
 
   render() {
     return (
-      <form>
+    <form>
+      <div>
         <label>Title</label>
         <input name="title" type="text" onChange={this.props.handleChange} />
+      </div>
+      <div>
         <label>Email</label>
         <input name="email" type="text" onChange={this.props.handleChange} />
+      </div>
+      <div>
         <label>Message</label>
         <input name="message" type="text" onChange={this.props.handleChange} />
+      </div>
+      <div>
         <label>Price</label>
         <input name="price" type="text" onChange={this.props.handleChange} />
+      </div>
+      <div>
         <button onClick={this.props.callback}>Create</button>
-      </form>
+      </div>
+    </form>
     );
   }
 }

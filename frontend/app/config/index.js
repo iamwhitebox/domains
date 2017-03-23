@@ -11,7 +11,7 @@ config.DEFAULT_USER_DATA = process.env.DEFAULT_USER_DATA || 'TODO: JSON file wit
 
 config.AUTH_API = process.env.AUTH_API || 'TODO: Auth API details';
 
-config.API_MODE = 'mock';
+config.API_MODE = 'mock'; //config.env || 'development';
 
 if (config.env === 'production') {
   config.API_ROOT = process.env.API_ROOT || 'https://myapi.com/api/v1';

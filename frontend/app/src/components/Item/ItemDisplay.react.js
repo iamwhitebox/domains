@@ -55,9 +55,9 @@ export default class ItemDisplay extends Component {
       });
     } else {
       display = <ItemEditForm
-                  title={this.props.title}
-                  email={this.props.email}
-                  price={this.props.price}
+                  title={this.state.title}
+                  email={this.state.email}
+                  price={this.state.price}
                   onClose={this.props.onClose}
                   onSubmit={this._onSubmit.bind(this)} />
     }

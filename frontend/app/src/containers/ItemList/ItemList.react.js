@@ -9,8 +9,10 @@ import ItemCreate from '../../components/ItemCreate/ItemCreate.react.js';
 
 class ItemList extends Component {
   render() {
+    var allItems;
+
     if (!this.props.items.isFetching) {
-      const allItems = this.props.items.items.map((item, index) => (
+      allItems = this.props.items.items.map((item, index) => (
         <Item
           key={item._id}
           itemData={item}

@@ -11,7 +11,6 @@ class ItemList extends Component {
   render() {
     var allItems;
     if (!this.props.isFetching) {
-      console.log(this.props.items);
       allItems = this.props.items.map((item, index) => (
         <Item
           key={item._id['$oid']}
@@ -23,7 +22,6 @@ class ItemList extends Component {
 
     return (
       <div>
-        <ItemCreate />
         <table className="table">
           <thead>
             <tr>

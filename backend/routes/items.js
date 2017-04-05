@@ -69,6 +69,7 @@ router.route('/:item_id')
     }, req.body, {
       new: true
     }, function(err, item) {
+      console.log(item);
       if (err) {
         res.status(400).send({error: "Error updating item"});
       } else {

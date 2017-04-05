@@ -7,7 +7,7 @@ if (API_MODE === 'production') {
 }
 
 if (API_MODE === 'development') {
-  API.API_ITEMS = `${API_ROOT}/items`;
+  API.API_ITEMS = `${API_ROOT}`;
 }
 
 
@@ -54,8 +54,8 @@ apiService.itemUpdate = (itemData) => {
     });
   }
 
-  return fetch(API.API_ITEMS + '/' + itemData.id, {
-    method: 'PATCH',
+  return fetch(API.API_ITEMS + '&q=' + '{"_id":{"$oid":"' + itemData.id['$oid'] + '"}}', {
+    method: 'PUT',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',

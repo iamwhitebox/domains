@@ -13,7 +13,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}r>
+    <Router history={browserHistory}>
       <Route path="/" component={ItemList}>
       </Route>
     </Router>

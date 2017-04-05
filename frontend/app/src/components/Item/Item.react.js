@@ -45,7 +45,7 @@ export class Item extends Component {
       {
         title: data.title,
         email: data.email,
-        message: data.message,
+        message: data.message || '',
         price: data.price,
         active: true
       }
@@ -86,9 +86,7 @@ export class Item extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    items: state.items,
-  };
+  return state.items;
 }
 
 export default connect(mapStateToProps, {

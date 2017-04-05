@@ -40,9 +40,7 @@ export class ItemCreate extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    items: state.items,
-  };
+  return state.items;
 }
 
 export default connect(mapStateToProps, {

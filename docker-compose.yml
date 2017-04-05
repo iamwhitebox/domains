@@ -2,30 +2,6 @@ version: '2'
 
 services:
 
-  # MongoDB Data Container
-  # This is a 'data volume container' for the MongoDB database.
-  mongodb-data:
-    image: mongo:3.3.9
-    command: /dev/null
-    volumes:
-      - /data/db
-
-  # MongoDB Container
-  # The main MongoDB container, uses the volume associated with the mongodb-data
-  # container.
-  mongodb:
-    image: mongo:3.3.9
-    command: mongod
-    volumes_from:
-      - mongodb-data
-
-  # MongoDB Seed
-  # Seed the mongodb collection with some initial data.
-  mongo-seed:
-    build: ./mongo-seed
-    links:
-      - mongodb
-
   # Backend
   # Mounts the app as a volume and installs packages so we can develop locally
   backend:
@@ -36,8 +12,6 @@ services:
     command: bash -c "npm install && npm run start"
     ports:
      - "3001:3001"
-    links:
-      - mongodb:mongodb
     restart: on-failure
 
   # Frontend
@@ -51,6 +25,4 @@ services:
     ports:
       - "3010:3010"
     command: bash -c "npm install && npm run start-dev"
-    links:
-      - backend:backend
     restart: on-failure

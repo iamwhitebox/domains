@@ -1,78 +1,57 @@
 [
-  {
-    "id": 1,
-		"_id": "item1",
-    "type": "alert",
-    "title": "hello.world",
-    "email": "something@something.com",
-    "message": "",
-    "createdDate": "date",
-    "price": "$9.00",
-    "active": true
-  },
-  {
-    "id": 2,
-		"_id": "item2",
-    "type": "welcome.lol",
-    "title": "Item 2",
-    "email": "something@something.com",
-    "message": "lol",
-    "createdDate": "date",
-    "price": "$12.00",
-    "active": true
-  },
-  {
-    "id": 3,
-		"_id": "item3",
-    "type": "message",
-    "title": "various.domain",
-    "email": "something@something.com",
-    "message": "lol",
-    "createdDate": "date",
-    "price": "$3.00",
-    "active": false
-  },
-  {
-    "id": 4,
-		"_id": "item4",
-    "type": "message",
-    "title": "something.else",
-    "message": "",
-    "createdDate": "date",
-    "price": "$12.00",
-    "active": false
-  },
-  {
-    "id": 5,
-		"_id": "item5",
-    "type": "update",
-    "title": "wow.lol",
-    "email": "something@something.com",
-    "message": "",
-    "createdDate": "date",
-    "price": "$12.00",
-    "active": false
-  },
-  {
-    "id": 6,
-		"_id": "item6",
-    "type": "update",
-    "title": "domainname.net",
-    "email": "something@something.com",
-    "message": "cars",
-    "createdDate": "date",
-    "price": "$12.00",
-    "active": false
-  },
-  {
-    "id": 7,
-		"_id": "item7",
-    "type": "update",
-    "title": "something.lol",
-    "email": "something@something.com",
-    "message": "",
-    "createdDate": "date",
-    "price": "$12.00",
-    "active": false
-  }
+    {
+        "title": "hello.world",
+        "email": "something@something.com",
+        "message": "",
+        "createdDate": "date",
+        "price": "$9.00",
+        "active": true
+    },
+    {
+        "title": "Item 2",
+        "email": "something@something.com",
+        "message": "lol",
+        "createdDate": "date",
+        "price": "$12.00",
+        "active": true
+    },
+    {
+        "title": "various.domain",
+        "email": "something@something.com",
+        "message": "lol",
+        "createdDate": "date",
+        "price": "$3.00",
+        "active": false
+    },
+    {
+        "title": "something.else",
+        "message": "",
+        "createdDate": "date",
+        "price": "$12.00",
+        "active": false
+    },
+    {
+        "title": "wow.lol",
+        "email": "something@something.com",
+        "message": "",
+        "createdDate": "date",
+        "price": "$12.00",
+        "active": false
+    },
+    {
+        "title": "domainname.net",
+        "email": "something@something.com",
+        "message": "cars",
+        "createdDate": "date",
+        "price": "$12.00",
+        "active": false
+    },
+    {
+        "title": "something.lol",
+        "email": "something@something.com",
+        "message": "",
+        "createdDate": "date",
+        "price": "$12.00",
+        "active": false
+    }
 ]

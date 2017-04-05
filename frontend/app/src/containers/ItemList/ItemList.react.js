@@ -10,11 +10,11 @@ import ItemCreate from '../../components/ItemCreate/ItemCreate.react.js';
 class ItemList extends Component {
   render() {
     var allItems;
-
-    if (!this.props.items.isFetching) {
-      allItems = this.props.items.items.map((item, index) => (
+    if (!this.props.isFetching) {
+      console.log(this.props.items);
+      allItems = this.props.items.map((item, index) => (
         <Item
-          key={item._id}
+          key={item._id['$oid']}
           itemData={item}
           arrayKey={index}
         />
@@ -23,6 +23,7 @@ class ItemList extends Component {
 
     return (
       <div>
+        <ItemCreate />
         <table className="table">
           <thead>
             <tr>
@@ -50,9 +51,7 @@ class ItemList extends Component {
 }
 
 function mapStateToProps(state) {
-  return {
-    items: state.items,
-  };
+  return state.items;
 }
 
 export default connect(mapStateToProps)(ItemList)

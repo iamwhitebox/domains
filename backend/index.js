@@ -26,13 +26,13 @@ app.use(function(req, res, next) {
 
 // DB Connection
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://mongodb:27017/reduxcrud');
+mongoose.connect('mongodb://mongodb:27017/reach-engine');
 
 // Load routes
 var test = require('./routes/test');
 var items = require('./routes/items');
 
-// Use routes in app, prefixed with /api/v1
+// Use routes in app, prefixed with /api/v1/items
 app.use('/', test);
 app.use('/api/v1/items', items);
 

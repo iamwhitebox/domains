@@ -1,10 +1,19 @@
 {
   "name": "domains",
   "version": "1.0.0",
-  "engines": {
-    "node": "6.4.0"
+  "description": "To run just the frontend in mock mode:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "mongoimport": "^1.0.6"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamwhitebox/domains.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamwhitebox/domains/issues"
+  },
+  "homepage": "https://github.com/iamwhitebox/domains#readme"
 }

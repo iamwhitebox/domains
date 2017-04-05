@@ -2,6 +2,10 @@ import fetch from 'isomorphic-fetch';
 
 const API = {};
 
+const query = function (itemData) {
+  return '{"_id":{"$oid":"' + itemData.id['$oid'] + '"}}';
+}
+
 if (API_MODE === 'production') {
   API.API_ITEMS = `${API_ROOT}/items`;
 }
@@ -54,7 +58,7 @@ apiService.itemUpdate = (itemData) => {
     });
   }
 
-  return fetch(API.API_ITEMS + '&q=' + '{"_id":{"$oid":"' + itemData.id['$oid'] + '"}}', {
+  return fetch(API.API_ITEMS + '&q=' + query(itemData.id), {
     method: 'PUT',
     headers: {
       Accept: 'application/json',

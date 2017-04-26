@@ -1,10 +1,7 @@
 import fetch from 'isomorphic-fetch';
+import query from '../../utilities/query';
 
 const API = {};
-
-const query = function (itemData) {
-  return '{"_id":{"$oid":"' + itemData.id['$oid'] + '"}}';
-}
 
 if (API_MODE === 'production') {
   API.API_ITEMS = `${API_ROOT}/items`;
@@ -22,7 +19,6 @@ if (API_MODE === 'mock') {
 export { API };
 
 const apiService = {};
-
 
 apiService.itemCreate = (data) => {
   if (API_MODE === 'mock') {
@@ -58,7 +54,7 @@ apiService.itemUpdate = (itemData) => {
     });
   }
 
-  return fetch(API.API_ITEMS + '&q=' + query(itemData.id), {
+  return fetch(API.API_ITEMS + '&q=' + query(itemData.id['$oid']), {
     method: 'PUT',
     headers: {
       Accept: 'application/json',
@@ -74,19 +70,17 @@ apiService.itemDelete = (id) => {
   if (API_MODE === 'mock') {
     return new Promise((resolve, reject) => {
       if (Math.random() < 0.2) {
-        reject(new Error('Failed to fetch! 20% of fetches set to fail :('));
+        reject(new Error('Failed to fetch!'));
       }
       resolve('Success!');
     });
   }
 
-  return fetch(API.API_ITEMS + '/' + id, {
+  return fetch(API.API_ITEMS + '&q=' + query(id), {
     method: 'DELETE',
   })
   .then(response => response.json())
   .then(json => json);
 };
-
-
 
 export { apiService };
